@@ -3,4 +3,5 @@ import numpy as np
 
 def runDNN(Xtrain, Ytrain,Xtest):
 
-    #define th
+    #define the model features
+    #FEAT

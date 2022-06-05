@@ -4,4 +4,4 @@ import numpy as np
 def runDNN(Xtrain, Ytrain,Xtest):
 
     #define the model features
-    #FEAT
+    #FEATURES = ['height/width

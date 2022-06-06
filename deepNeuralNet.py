@@ -6,4 +6,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     #define the model features
     #FEATURES = ['height/width','depth']
     FEATURES = ['outputs']
- 
+    feature_col

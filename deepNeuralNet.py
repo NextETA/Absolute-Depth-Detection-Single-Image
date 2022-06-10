@@ -6,4 +6,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     #define the model features
     #FEATURES = ['height/width','depth']
     FEATURES = ['outputs']
-    feature_cols = [tf.feature_column.numeric
+    feature_cols = [tf.feature_column.numeric_column(k) for k in FEAT

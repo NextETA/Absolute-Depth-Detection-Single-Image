@@ -8,4 +8,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     FEATURES = ['outputs']
     feature_cols = [tf.feature_column.numeric_column(k) for k in FEATURES]
 
-    #defin
+    #define the DNN r

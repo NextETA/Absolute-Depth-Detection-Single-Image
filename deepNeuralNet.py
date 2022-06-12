@@ -8,4 +8,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
     FEATURES = ['outputs']
     feature_cols = [tf.feature_column.numeric_column(k) for k in FEATURES]
 
-    #define the DNN r
+    #define the DNN regressor
+    re

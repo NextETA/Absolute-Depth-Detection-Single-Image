@@ -9,4 +9,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     feature_cols = [tf.feature_column.numeric_column(k) for k in FEATURES]
 
     #define the DNN regressor
-    re
+    regressor = tf.contr

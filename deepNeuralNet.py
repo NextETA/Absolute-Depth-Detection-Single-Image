@@ -9,4 +9,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     feature_cols = [tf.feature_column.numeric_column(k) for k in FEATURES]
 
     #define the DNN regressor
-    regressor = tf.contrib.learn.DNNRegressor(feature_columns=feature_cols, 
+    regressor = tf.contrib.learn.DNNRegressor(feature_columns=feature_cols, hidden_units=[1,1

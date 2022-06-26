@@ -11,4 +11,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
     #define the DNN regressor
     regressor = tf.contrib.learn.DNNRegressor(feature_columns=feature_cols, hidden_units=[1,1])
 
-    #define the input functions f
+    #define the input functions for training
+ 

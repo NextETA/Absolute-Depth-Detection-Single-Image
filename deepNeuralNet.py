@@ -12,4 +12,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
     regressor = tf.contrib.learn.DNNRegressor(feature_columns=feature_cols, hidden_units=[1,1])
 
     #define the input functions for training
-    def get_input_fn(xData, yData=None, num_epochs=
+    def get_input_fn(xData, yData=None, num_epochs=None, shuffle=True):
+  

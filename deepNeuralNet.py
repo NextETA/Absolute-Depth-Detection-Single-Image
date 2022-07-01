@@ -13,4 +13,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
 
     #define the input functions for training
     def get_input_fn(xData, yData=None, num_epochs=None, shuffle=True):
-        return t
+        return tf.estimator.inputs.n

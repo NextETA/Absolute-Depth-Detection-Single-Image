@@ -15,4 +15,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
     def get_input_fn(xData, yData=None, num_epochs=None, shuffle=True):
         return tf.estimator.inputs.numpy_input_fn(
             #x={FEATURES[i]: xData[:,i] for i in range(0,2)},
-            x={FEATURES[0]: xD
+            x={FEATURES[0]: xData},
+            y=yD

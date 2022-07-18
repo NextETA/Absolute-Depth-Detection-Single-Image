@@ -16,4 +16,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
         return tf.estimator.inputs.numpy_input_fn(
             #x={FEATURES[i]: xData[:,i] for i in range(0,2)},
             x={FEATURES[0]: xData},
-            y=yD
+            y=yData,
+            num_epoc

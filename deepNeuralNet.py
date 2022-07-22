@@ -21,4 +21,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
             shuffle=shuffle)
 
     #training
-    regressor.fit(input_fn=get_i
+    regressor.fit(input_fn=get_input_fn(Xtrain, Ytrain,

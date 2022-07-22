@@ -18,4 +18,6 @@ def runDNN(Xtrain, Ytrain,Xtest):
             x={FEATURES[0]: xData},
             y=yData,
             num_epochs=num_epochs,
-            shuffle=shuffle
+            shuffle=shuffle)
+
+    #training

@@ -17,4 +17,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
             #x={FEATURES[i]: xData[:,i] for i in range(0,2)},
             x={FEATURES[0]: xData},
             y=yData,
-            num_epoc
+            num_epochs=num_epochs,
+   

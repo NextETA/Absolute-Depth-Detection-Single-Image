@@ -23,4 +23,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
     #training
     regressor.fit(input_fn=get_input_fn(Xtrain, Ytrain, None, False), steps=5000)
 
-    #evaluation an
+    #evaluation and getting loss
+   

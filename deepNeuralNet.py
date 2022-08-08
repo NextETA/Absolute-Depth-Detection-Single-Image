@@ -26,4 +26,6 @@ def runDNN(Xtrain, Ytrain,Xtest):
     #evaluation and getting loss
     ev = regressor.evaluate(input_fn=get_input_fn(Xtrain, Ytrain, 1, False))
     loss_score = ev["loss"]
-    print("Loss: {0:f}".format(loss
+    print("Loss: {0:f}".format(loss_score))
+
+    #testing 

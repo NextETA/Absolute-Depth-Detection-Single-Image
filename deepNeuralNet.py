@@ -29,4 +29,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     print("Loss: {0:f}".format(loss_score))
 
     #testing and predicting
-    yha
+    yhat = regressor.pred

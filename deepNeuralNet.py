@@ -28,4 +28,5 @@ def runDNN(Xtrain, Ytrain,Xtest):
     loss_score = ev["loss"]
     print("Loss: {0:f}".format(loss_score))
 
-    #testing 
+    #testing and predicting
+    yha

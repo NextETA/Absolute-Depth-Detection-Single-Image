@@ -31,4 +31,4 @@ def runDNN(Xtrain, Ytrain,Xtest):
     #testing and predicting
     yhat = regressor.predict(input_fn=get_input_fn(Xtest, None, 1, False))
     predictions = np.array(list(p for p in yhat))
-    return pre
+    return predictions

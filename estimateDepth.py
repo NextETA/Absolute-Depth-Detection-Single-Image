@@ -62,3 +62,23 @@ def cnn_model_fn(features, labels, mode):
 
   # Dense Layer
   # Densely connected layer with 1024 neurons
+  # Input Tensor Shape: [batch_size, 120 * 160 * 16]
+  # Output Tensor Shape: [batch_size, 120*160]
+  dense = tf.layers.dense(inputs=pool2_flat, units=128, activation=tf.nn.relu)
+
+  # Add dropout operation; 0.6 probability that element will be kept
+  dropout = tf.layers.dropout(
+      inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN)
+
+  # Logits layer
+  # Input Tensor Shape: [batch_size, 19200]
+  # Output Tensor Shape: [batch_size, 19200]
+  logits = tf.layers.dense(inputs=dropout, units=307200)
+
+  predictions = {
+      # Generate predictions (for PREDICT and EVAL mode)
+      "classes": logits
+      #"classes": tf.argmax(input=logits, axis=1),
+      # Add `softmax_tensor` to the graph. It is used for PREDICT and by the
+      # `logging_hook`.
+      #"probabilities": tf.nn.softmax(logits, name="softmax_tensor")

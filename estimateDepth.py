@@ -82,3 +82,21 @@ def cnn_model_fn(features, labels, mode):
       # Add `softmax_tensor` to the graph. It is used for PREDICT and by the
       # `logging_hook`.
       #"probabilities": tf.nn.softmax(logits, name="softmax_tensor")
+  }
+  if mode == tf.estimator.ModeKeys.PREDICT:
+    print(predictions)
+    return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions)
+
+  # Calculate Loss (for both TRAIN and EVAL modes)
+  #onehot_labels = tf.one_hot(indices=tf.cast(labels, tf.int32), depth=10) #honxestly this depth should be 10 but i dont care
+  print('i am printing here right before calculating losses')
+  #print(tf.cast(labels, tf.int32))
+  loss = tf.reduce_sum(tf.square(labels - logits))
+
+  # Configure the Training Op (for TRAIN mode)
+  if mode == tf.estimator.ModeKeys.TRAIN:
+    optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
+    train_op = optimizer.minimize(
+        loss=loss,
+        global_step=tf.train.get_global_step())
+    return tf.estimator.EstimatorSpec(mode=mode, loss=loss, train_op=train_op)

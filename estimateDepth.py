@@ -100,3 +100,30 @@ def cnn_model_fn(features, labels, mode):
         loss=loss,
         global_step=tf.train.get_global_step())
     return tf.estimator.EstimatorSpec(mode=mode, loss=loss, train_op=train_op)
+
+  # Add evaluation metrics (for EVAL mode)
+  eval_metric_ops = {
+      "accuracy": tf.metrics.accuracy(
+          labels=labels, predictions=predictions["classes"])}
+  print(predictions["classes"])
+  return tf.estimator.EstimatorSpec(
+      mode=mode, loss=loss, eval_metric_ops=eval_metric_ops)
+
+def main(unused_argv):
+  data = np.load('data/nyu_dataset_images.npy')
+  labels_data = np.load('data/nyu_dataset_depths.npy')
+  train_data = np.array([data[:, :, :, i] for i in range(20)], dtype='float32')
+  eval_data = np.array([data[:, :, :, i] for i in range(20, 30)], dtype='float32')
+  # train_labels = np.array([labels_data[:,:,i] for i in range(20)])
+  # eval_labels = np.array([labels_data[:,:,i] for i in range(20,30)])
+  train_labels = np.array([np.array(labels_data[:, :, i]).flatten() for i in range(20)])  # use these for flattened labels
+  eval_labels = np.array([np.array(labels_data[:, :, i]).flatten() for i in range(20, 30)])
+
+  # Create the Estimator
+  depth_classifier = tf.estimator.Estimator(
+      model_fn=cnn_model_fn, model_dir="/tmp/mnist_convnet_model")
+
+  # Set up logging for predictions
+  # Log the values in the "Softmax" tensor with label "probabilities"
+  #tensors_to_log = {"probabilities": "softmax_tensor"}
+  #logging_hook = tf.train.LoggingTensorHook(

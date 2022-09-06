@@ -39,3 +39,30 @@ def estimateSize():
     for i in range(n):
         # print("Testing on: " + str(imageLabels[i]))
         imgNum = int(imageLabels[i, 0])
+        imgi = images[:, :, :, imgNum]
+        h, w, c = imgi.shape
+
+        # show the image
+        # pilimg = Image.fromarray(imgi, 'RGB')
+        # pilimg.show()
+
+        # bbox size [k,5] where n is image number, k is num of objects in each image
+        # last dimension has x, y, height, width, depth of each bbox in image i
+        bbox = find_BB_and_depth(imgi, depths[:, :, imgNum], False)
+
+        # add to the allBBoxes matrix
+        k = int(imageLabels[i, 1])
+
+        # add the bbox values to the imageLabel
+        imageLabels[i, 4:9] = bbox[k]
+
+        # add the height width of the image to the imageLabels
+        imageLabels[i, 9:11] = (h, w)
+
+    # Part 4: Aggregate training data
+
+    train_height = imageLabels[:, 6] * imageLabels[:, 8]
+    train_width = imageLabels[:, 7] * imageLabels[:, 8]
+
+    # # X train- training height and widths [before formula realization]
+    #

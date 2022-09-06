@@ -22,3 +22,20 @@ def estimateSize():
     # load all the data
     depths = np.load('data/nyu_dataset_depths.npy')
     images = np.load('data/nyu_dataset_images.npy')
+    # labels = np.load('nyu_dataset_labels.npy')
+    # names = np.load('nyu_dataset_names.npy')
+    # scenes = np.load('nyu_dataset_scenes.npy')
+
+    # Part 2: Import labels n by 4 (img #, bb#, lab_h, lab_w)
+
+    labels = np.loadtxt('data/ImageLabels.dat', delimiter=',')
+    n, d = labels.shape
+
+    # array to hold (img#, bb#, lab_h, lab_w, x, y, h, w, d, img_h, img_w)
+    imageLabels = np.zeros((n, 11))
+    imageLabels[:, 0:4] = labels
+
+    # Part 3: Create bounding boxes for our training images
+    for i in range(n):
+        # print("Testing on: " + str(imageLabels[i]))
+        imgNum = int(imageLabels[i, 0])

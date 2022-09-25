@@ -134,3 +134,29 @@ def estimateSize():
     # Part 7: predict heights and widths using linreg
     yHatHeight = linreg_x.predict(Xtest_height)
     yHatWidth = linreg_y.predict(Xtest_width)
+
+    print "Linear Regression"
+    print("yHatHeight:" + str(yHatHeight))
+    print("yHatWidth:" + str(yHatWidth))
+
+    # Part 8: Fit a Neural nets with training data
+
+    # #Get X train
+    # px = imageLabels[:, 9] / 2
+    # depth = imageLabels[:, 8]
+    # height = imageLabels[:, 6]
+    # py = imageLabels[:, 10] / 2
+    # width = imageLabels[:, 7]
+    #
+    # #three features
+    # #Xtrain_height = np.c_[height, px, depth]
+    # #Xtrain_width = np.c_[width, py, depth]
+    # #two features
+    # Xtrain_height = np.c_[height, depth]
+    # Xtrain_width = np.c_[width, depth]
+    #
+    # # Get y train
+    # #Ytrain = np.vstack((label_height, label_width)).T
+    # Ytrain_height = label_height.T
+    # Ytrain_width = label_width.T
+    #

@@ -160,3 +160,29 @@ def estimateSize():
     # Ytrain_height = label_height.T
     # Ytrain_width = label_width.T
     #
+    # #Get x test
+    # px_test = imageUnLabeled[:, 9] / 2
+    # depth_test = imageUnLabeled[:, 8]
+    # height_test = imageUnLabeled[:, 6]
+    # py_test = imageUnLabeled[:, 10] / 2
+    # width_test = imageUnLabeled[:, 7]
+    #
+    # #three features
+    # #Xtest_height = np.c_[height_test, px_test, depth_test]
+    # #Xtest_width = np.c_[width_test, py_test, depth_test]
+    # #two features
+    # Xtest_height = np.c_[height_test , depth_test]
+    # Xtest_width = np.c_[width_test, depth_test]
+    #
+    # #y_hat_height = runDNN(Xtrain_height, Ytrain_height, Xtest_height)
+    # #_hat_width = runDNN(Xtrain_width, Ytrain_width, Xtest_width)
+
+    y_hat_height = runDNN(train_height, label_height.T, Xtest_height)
+    y_hat_width = runDNN(train_width, label_width.T, Xtest_width)
+
+    print "Deep Neural Net"
+    print("yHatHeight:" + str(y_hat_height))
+    print("yHatWidth:" + str(y_hat_width))
+
+
+if __name__ == '__main__':

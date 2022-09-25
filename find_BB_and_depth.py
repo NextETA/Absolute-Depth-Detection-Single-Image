@@ -17,3 +17,18 @@ def find_BB_and_depth(img_rgb, pixel_depths, drawContours=False):
 
         # draw a green rectangle to visualize the bounding rect
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+        depth = np.mean(pixel_depths[2 * y:2 * (y + h), 2 * x:2 * (x + w)])
+        if w > 15 and h > 15 and w < 600 and h < 400:
+            output[i, :] = x * 2, y * 2, w * 2, h * 2, depth
+
+    if drawContours :
+        cv2.drawContours(img, contours, -1, (255, 255, 0), 1)
+        cv2.imshow("contours", img)
+        cv2.waitKey(10)
+        raw_input("Press Enter to continue...")
+
+    cv2.destroyAllWindows()
+
+    return output
+    # the type is a [k, 5] array, the 5 features are x, y, w, h, depth_of_bb_in_meters

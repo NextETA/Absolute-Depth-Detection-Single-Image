@@ -186,3 +186,4 @@ def estimateSize():
 
 
 if __name__ == '__main__':
+    estimateSize()

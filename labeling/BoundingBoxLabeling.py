@@ -1,1 +1,2 @@
-im
+import os, sys
+sys.pat

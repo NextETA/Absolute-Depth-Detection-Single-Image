@@ -4,4 +4,4 @@ import numpy as np
 import cv2
 
 # takes in a rgbd 4 dimensional image
-def BoundingBo
+def BoundingBoxLabeling(img_rgb, pixel

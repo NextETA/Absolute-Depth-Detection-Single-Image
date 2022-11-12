@@ -7,4 +7,4 @@ import cv2
 def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = -1):
     img = cv2.pyrDown(img_rgb)
 
-    r
+    ret, threshed_img = cv2.th

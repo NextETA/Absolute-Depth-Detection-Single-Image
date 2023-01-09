@@ -13,4 +13,5 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
     output = np.zeros([len(contours), 5])
     listOfBBs = []
 
-    for i in range(len(contours
+    for i in range(len(contours)):
+        # get th

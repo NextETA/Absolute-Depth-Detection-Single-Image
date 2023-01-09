@@ -11,4 +11,6 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
     image, contours, hier = cv2.findContours(threshed_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     output = np.zeros([len(contours), 5])
-    listOf
+    listOfBBs = []
+
+    for

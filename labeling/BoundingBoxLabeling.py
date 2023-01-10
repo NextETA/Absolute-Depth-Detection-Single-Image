@@ -15,3 +15,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
 
     for i in range(len(contours)):
         # get the bounding rect
+        x, y, w, h =

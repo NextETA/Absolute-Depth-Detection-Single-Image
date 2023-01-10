@@ -14,4 +14,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
     listOfBBs = []
 
     for i in range(len(contours)):
-        # get th
+        # get the bounding rect

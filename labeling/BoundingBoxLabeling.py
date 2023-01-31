@@ -17,4 +17,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         # get the bounding rect
         x, y, w, h = cv2.boundingRect(contours[i])
 
-        # draw a
+        # draw a green rectangle to vi

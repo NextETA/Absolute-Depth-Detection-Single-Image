@@ -23,4 +23,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         depth = np.mean(pixel_depths[2 * y:2 * (y + h), 2 * x:2 * (x + w)])
         if w > 15 and h > 15 and w < 300 and h < 200:
             listOfBBs.append(i)
-            output[i, :] =
+            output[i, :] = x * 2, y * 2, w

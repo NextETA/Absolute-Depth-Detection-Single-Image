@@ -25,4 +25,6 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
             listOfBBs.append(i)
             output[i, :] = x * 2, y * 2, w * 2, h * 2, depth
 
-    cv2.destroyAllWin
+    cv2.destroyAllWindows()
+
+    print(

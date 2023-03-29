@@ -29,4 +29,5 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
 
     print(listOfBBs)
 
-    for i in listOfBB
+    for i in listOfBBs:
+        img

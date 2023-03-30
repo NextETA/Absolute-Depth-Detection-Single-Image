@@ -30,4 +30,5 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
     print(listOfBBs)
 
     for i in listOfBBs:
-        img
+        img = cv2.pyrDown(img_rgb)
+

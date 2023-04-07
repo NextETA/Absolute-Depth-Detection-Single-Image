@@ -32,4 +32,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
     for i in listOfBBs:
         img = cv2.pyrDown(img_rgb)
 
-        ret, threshed_img = cv2.threshold(cv
+        ret, threshed_img = cv2.threshold(cv2.cvtColor(img, cv2.COLOR

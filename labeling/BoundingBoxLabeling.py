@@ -33,4 +33,6 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         img = cv2.pyrDown(img_rgb)
 
         ret, threshed_img = cv2.threshold(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 127, 255, cv2.THRESH_BINARY)
-        image, contours, hier = cv2.findContours(threshed_img, cv2.RETR_TREE, cv2.CH
+        image, contours, hier = cv2.findContours(threshed_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+ 

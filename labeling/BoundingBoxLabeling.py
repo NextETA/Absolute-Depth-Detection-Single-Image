@@ -36,4 +36,6 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         image, contours, hier = cv2.findContours(threshed_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
         # get the bounding rect
-        x, y, w, h = cv2.boundingRect
+        x, y, w, h = cv2.boundingRect(contours[i])
+
+        # 

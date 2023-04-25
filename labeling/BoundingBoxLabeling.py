@@ -42,4 +42,6 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
         cv2.imshow("contours", img)
-        cv2.waitKey(10
+        cv2.waitKey(10)
+
+        line = raw

@@ -46,4 +46,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
 
         line = raw_input("Current imgnum,bbnum: " + str(imageNum) + "," + str(i) + ",")
         if len(line) > 0:
-            f = open("../
+            f = open("../data/ImageLabels.

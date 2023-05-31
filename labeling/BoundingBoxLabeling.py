@@ -48,4 +48,6 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         if len(line) > 0:
             f = open("../data/ImageLabels.dat","a+")
             f.write("\r\n" + str(imageNum) + "," + str(i) + "," + line)
-          
+            f.close()
+
+ 

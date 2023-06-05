@@ -50,4 +50,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
             f.write("\r\n" + str(imageNum) + "," + str(i) + "," + line)
             f.close()
 
- 
+        cv2.destroyAll

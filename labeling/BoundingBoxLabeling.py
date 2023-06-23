@@ -53,4 +53,4 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         cv2.destroyAllWindows()
 
     return []
-    # the type is a [k, 5] ar
+    # the type is a [k, 5] array, the 5 features are 

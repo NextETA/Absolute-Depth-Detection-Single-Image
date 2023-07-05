@@ -3,4 +3,4 @@ import numpy as np
 
 print sio.whosmat('modified.mat')
 
-mat
+matlab_contents = sio.loadmat('modi

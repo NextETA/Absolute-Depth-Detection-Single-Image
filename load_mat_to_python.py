@@ -5,4 +5,4 @@ print sio.whosmat('modified.mat')
 
 matlab_contents = sio.loadmat('modified.mat')
 
-depths = matl
+depths = matlab_contents['dep

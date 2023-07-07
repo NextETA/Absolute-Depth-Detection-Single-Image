@@ -3,4 +3,6 @@ import numpy as np
 
 print sio.whosmat('modified.mat')
 
-matlab_contents = sio.loadmat('modi
+matlab_contents = sio.loadmat('modified.mat')
+
+depths = matl

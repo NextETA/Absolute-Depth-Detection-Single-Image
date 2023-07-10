@@ -5,4 +5,5 @@ print sio.whosmat('modified.mat')
 
 matlab_contents = sio.loadmat('modified.mat')
 
-depths = matlab_contents['dep
+depths = matlab_contents['depths']
+np.save('nyu_datas

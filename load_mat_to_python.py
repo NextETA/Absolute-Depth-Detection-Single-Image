@@ -8,4 +8,5 @@ matlab_contents = sio.loadmat('modified.mat')
 depths = matlab_contents['depths']
 np.save('nyu_dataset_depths', depths)
 
-images = matlab_cont
+images = matlab_contents['images']
+np.save(

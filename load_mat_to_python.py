@@ -9,4 +9,5 @@ depths = matlab_contents['depths']
 np.save('nyu_dataset_depths', depths)
 
 images = matlab_contents['images']
-np.save(
+np.save('nyu_dataset_images', images)
+

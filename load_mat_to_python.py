@@ -11,3 +11,4 @@ np.save('nyu_dataset_depths', depths)
 images = matlab_contents['images']
 np.save('nyu_dataset_images', images)
 
+labels = matlab_c

@@ -15,4 +15,6 @@ labels = matlab_contents['labels']
 np.save('nyu_dataset_labels', labels)
 
 names = matlab_contents['names']
-np.save('nyu_dataset_names
+np.save('nyu_dataset_names', names)
+
+scenes 

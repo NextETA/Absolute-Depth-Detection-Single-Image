@@ -12,4 +12,4 @@ images = matlab_contents['images']
 np.save('nyu_dataset_images', images)
 
 labels = matlab_contents['labels']
-np.
+np.save('nyu_dataset_l

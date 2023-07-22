@@ -13,3 +13,5 @@ np.save('nyu_dataset_images', images)
 
 labels = matlab_contents['labels']
 np.save('nyu_dataset_labels', labels)
+
+names = matlab_conten

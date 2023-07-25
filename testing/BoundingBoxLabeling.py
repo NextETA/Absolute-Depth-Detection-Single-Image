@@ -48,3 +48,10 @@ def BoundingBoxLabeling(img_rgb, pixel_depths, drawContours = False, imageNum = 
         line = raw_input("Current imgnum,bbnum: " + str(imageNum) + "," + str(i) + ",")
         if len(line) > 0:
             f = open("../data/ImageLabels.dat","a+")
+            f.write("\r\n" + str(imageNum) + "," + str(i) + "," + line)
+            f.close()
+
+        cv2.destroyAllWindows()
+
+    return []
+    # the type is a [k, 5] array, the 5 features are x, y, w, h, depth_of_bb_in_meters

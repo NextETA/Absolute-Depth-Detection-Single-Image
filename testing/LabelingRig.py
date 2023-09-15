@@ -5,3 +5,5 @@ import cv2
 from BoundingBoxLabeling import BoundingBoxLabeling
 from linreg_closedform import LinearRegressionClosedForm as LinearRegression
 from PIL import Image
+
+# Load Image 

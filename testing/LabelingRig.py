@@ -7,4 +7,4 @@ from linreg_closedform import LinearRegressionClosedForm as LinearRegression
 from PIL import Image
 
 # Load Image and Depth Data
-depths = np.load('../data/nyu_d
+depths = np.load('../data/nyu_dataset_depths.npy')

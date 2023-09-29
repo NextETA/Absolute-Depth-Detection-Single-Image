@@ -8,4 +8,4 @@ from PIL import Image
 
 # Load Image and Depth Data
 depths = np.load('../data/nyu_dataset_depths.npy')
-images = np.loa
+images = np.load('../data/nyu_dat

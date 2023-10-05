@@ -10,4 +10,4 @@ from PIL import Image
 depths = np.load('../data/nyu_dataset_depths.npy')
 images = np.load('../data/nyu_dataset_images.npy')
 
-# Create bou
+# Create bounding boxes to be 

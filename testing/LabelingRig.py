@@ -10,4 +10,5 @@ from PIL import Image
 depths = np.load('../data/nyu_dataset_depths.npy')
 images = np.load('../data/nyu_dataset_images.npy')
 
-# Create bounding boxes to be 
+# Create bounding boxes to be labeled
+## Starti

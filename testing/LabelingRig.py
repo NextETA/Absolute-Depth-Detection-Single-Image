@@ -15,4 +15,4 @@ images = np.load('../data/nyu_dataset_images.npy')
 i = int(raw_input("Enter img#: "))
 
 while(1):
-    # ge
+    # get get the rbg image

@@ -13,3 +13,6 @@ images = np.load('../data/nyu_dataset_images.npy')
 # Create bounding boxes to be labeled
 ## Starting point
 i = int(raw_input("Enter img#: "))
+
+while(1):
+    # ge

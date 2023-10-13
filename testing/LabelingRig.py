@@ -16,3 +16,4 @@ i = int(raw_input("Enter img#: "))
 
 while(1):
     # get get the rbg image
+    imgi = images[:,:,:,i]

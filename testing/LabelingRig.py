@@ -18,4 +18,4 @@ while(1):
     # get get the rbg image
     imgi = images[:,:,:,i]
     while (1) :
-        # bbox size [k,5] where n is image numb
+        # bbox size [k,5] where n is image number, k is num of obje

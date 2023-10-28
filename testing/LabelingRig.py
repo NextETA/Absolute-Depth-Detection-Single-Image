@@ -20,4 +20,4 @@ while(1):
     while (1) :
         # bbox size [k,5] where n is image number, k is num of objects in each image
         # last dimension has x, y, height, width, depth of each bbox in image i
-        bbox = BoundingBoxLabelin
+        bbox = BoundingBoxLabeling(imgi, depths[:,:,i]

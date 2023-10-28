@@ -19,4 +19,4 @@ while(1):
     imgi = images[:,:,:,i]
     while (1) :
         # bbox size [k,5] where n is image number, k is num of objects in each image
-        # last dime
+        # last dimension has x, y, 

@@ -21,4 +21,4 @@ while(1):
         # bbox size [k,5] where n is image number, k is num of objects in each image
         # last dimension has x, y, height, width, depth of each bbox in image i
         bbox = BoundingBoxLabeling(imgi, depths[:,:,i], True, imageNum = i)
-        entered = raw_input("See this i
+        entered = raw_input("See this image again (n/y

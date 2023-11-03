@@ -22,4 +22,4 @@ while(1):
         # last dimension has x, y, height, width, depth of each bbox in image i
         bbox = BoundingBoxLabeling(imgi, depths[:,:,i], True, imageNum = i)
         entered = raw_input("See this image again (n/y): ")
-        if 
+        if entered != 'y':

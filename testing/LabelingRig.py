@@ -23,4 +23,5 @@ while(1):
         bbox = BoundingBoxLabeling(imgi, depths[:,:,i], True, imageNum = i)
         entered = raw_input("See this image again (n/y): ")
         if entered != 'y':
-            bre
+            break
+        pilimg =

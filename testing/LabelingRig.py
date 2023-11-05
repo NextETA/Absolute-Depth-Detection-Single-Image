@@ -24,4 +24,4 @@ while(1):
         entered = raw_input("See this image again (n/y): ")
         if entered != 'y':
             break
-        pilimg =
+        pilimg = Image.fromarray(img

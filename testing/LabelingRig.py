@@ -27,4 +27,4 @@ while(1):
         pilimg = Image.fromarray(imgi, 'RGB')
         pilimg.show()
 
-    i
+    i = i+1;

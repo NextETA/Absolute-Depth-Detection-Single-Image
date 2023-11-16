@@ -25,4 +25,6 @@ while(1):
         if entered != 'y':
             break
         pilimg = Image.fromarray(imgi, 'RGB')
-       
+        pilimg.show()
+
+    i

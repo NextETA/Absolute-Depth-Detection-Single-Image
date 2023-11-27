@@ -30,3 +30,22 @@ def estimateSize():
 
     labels = np.loadtxt('data/ImageLabels.dat', delimiter=',')
     n, d = labels.shape
+
+    # array to hold (img#, bb#, lab_h, lab_w, x, y, h, w, d, img_h, img_w)
+    imageLabels = np.zeros((n, 11))
+    imageLabels[:, 0:4] = labels
+
+    # Part 3: Create bounding boxes for our training images
+    for i in range(n):
+        print("Testing on: " + str(imageLabels[i]))
+        imgNum = int(imageLabels[i, 0])
+        imgi = images[:, :, :, imgNum]
+        h, w, c = imgi.shape
+        bbox = find_BB_and_depth(imgi, depths[:, :, imgNum], False)
+        k = int(imageLabels[i, 1])
+        imageLabels[i, 4:9] = bbox[k]
+        imageLabels[i, 9:11] = (h, w)
+
+    # Part 4: Aggregate training data
+
+    # X train- training height and widths

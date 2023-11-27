@@ -49,3 +49,18 @@ def estimateSize():
     # Part 4: Aggregate training data
 
     # X train- training height and widths
+
+    train_height = (imageLabels[:, 9] / 2 -
+                    imageLabels[:, 6]) * imageLabels[:, 8]
+    train_width = (imageLabels[:, 10] / 2 -
+                   imageLabels[:, 7]) * imageLabels[:, 8]
+
+    # Y train- training heights and widths
+    label_height = imageLabels[:, 2]
+    label_width = imageLabels[:, 3]
+
+    # Part 5: Generate the test data
+    # image number, bouning box number
+    unlabeledWithDescription = np.loadtxt(
+        'data/ImageUnLabeled.dat', delimiter=',', usecols=(0, 1))
+    n, c = unlabeledWithDescription.shape

@@ -64,3 +64,29 @@ def estimateSize():
     unlabeledWithDescription = np.loadtxt(
         'data/ImageUnLabeled.dat', delimiter=',', usecols=(0, 1))
     n, c = unlabeledWithDescription.shape
+
+    # array to hold (img#, bb#, null, null, x, y, h, w, d, img_h, img_w)
+    imageUnLabeled = np.zeros((n, 11))
+    imageUnLabeled[:, 0:2] = unlabeledWithDescription
+
+    # Part 6: Fit a Linear Regression with training data
+    # do training on linear regression
+    linreg_x = LinearRegression(regLambda=1E-8)
+    linreg_y = LinearRegression(regLambda=1E-8)
+
+    linreg_x.fit(train_height, label_height)
+    linreg_y.fit(train_width, label_width)
+
+    # Part 6: Create bounding boxes for our testing images
+    for i in range(n):
+        imgNum = int(imageUnLabeled[i, 0])
+        imgi = images[:, :, :, imgNum]
+        h, w, c = imgi.shape
+
+        # show the image
+        # pilimg = Image.fromarray(imgi, 'RGB')
+        # pilimg.show()
+
+        # bbox size [k,5] where n is image number, k is num of objects in each image
+        # last dimension has x, y, height, width, depth of each bbox in image i
+        bbox = find_BB_and_depth(imgi, depths[:, :, imgNum], False)

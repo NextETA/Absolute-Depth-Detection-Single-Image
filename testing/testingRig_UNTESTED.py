@@ -90,3 +90,15 @@ def estimateSize():
         # bbox size [k,5] where n is image number, k is num of objects in each image
         # last dimension has x, y, height, width, depth of each bbox in image i
         bbox = find_BB_and_depth(imgi, depths[:, :, imgNum], False)
+
+        # get the bouning box number
+        k = int(imageLabels[i, 1])
+
+        # add the bbox values to the imageLabel
+        imageLabels[i, 4:9] = bbox[k]
+
+        # add the height width of the image to the imageLabels
+        imageLabels[i, 9:11] = (h, w)
+
+    Xtest_height = (imageUnLabeled[:, 10] / 2 -
+                    imageUnLabeled[:, 7]) * imageUnLabeled[:, 8]

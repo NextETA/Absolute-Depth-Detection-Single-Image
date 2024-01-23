@@ -121,3 +121,19 @@ def estimateSize():
     print("yHatWidth:" + str(yHatWidth))
 
     y_hat_linreg = np.hstack((yHatHeight, yHatWidth))
+
+    sys.exit()
+
+    # Part 8: Fit a Neural nets with training data
+
+    # re-massage the features
+    # width of the bbox, Px, height of bbox, Py, depth
+    heightWidth = np.hstack((train_height[:, [0, 2]], train_width[:, [0, 2]]))
+    Xtrain = np.c_[heightWidth, train_width[:, 1]]
+
+    # re-massage the ytrain
+    #heights and widths in meters
+    Ytrain = np.vstack((label_height, label_width)).T
+
+    # get the Xtest data
+    heightWidth = np.hstack((Xtest_height[:, [0, 2]], Xtest_width[:, [0, 2]]))

@@ -102,3 +102,22 @@ def estimateSize():
 
     Xtest_height = (imageUnLabeled[:, 10] / 2 -
                     imageUnLabeled[:, 7]) * imageUnLabeled[:, 8]
+    Xtest_width = (imageUnLabeled[:, 10] / 2 -
+                   imageUnLabeled[:, 7]) * imageUnLabeled[:, 8]
+
+    # Part 6: Fit a Linear Regression with training data
+    # do training on linear regression
+    linreg_x = LinearRegression(regLambda=1E-8)
+    linreg_y = LinearRegression(regLambda=1E-8)
+
+    linreg_x.fit(train_height, label_height)
+    linreg_y.fit(train_width, label_width)
+
+    # Part 7: predict heights and widths using linreg
+    yHatHeight = linreg_x.predict(Xtest_height)
+    yHatWidth = linreg_y.predict(Xtest_width)
+
+    print("yHatHeight:" + str(yHatHeight))
+    print("yHatWidth:" + str(yHatWidth))
+
+    y_hat_linreg = np.hstack((yHatHeight, yHatWidth))

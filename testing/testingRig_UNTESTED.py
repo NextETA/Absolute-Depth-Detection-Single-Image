@@ -137,3 +137,10 @@ def estimateSize():
 
     # get the Xtest data
     heightWidth = np.hstack((Xtest_height[:, [0, 2]], Xtest_width[:, [0, 2]]))
+    Xtest = np.c_[heightWidth, train_width[:, 1]]
+
+    y_hat_NN = runNeuralNet(Xtrain, Ytrain, Xtest)
+
+
+if __name__ == '__main__':
+    estimateSize()

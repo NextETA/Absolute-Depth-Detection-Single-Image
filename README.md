@@ -11,4 +11,6 @@ Dependencies:
 3.  Python 2.7
 
 
-Instructio
+Instructions:
+
+1.  Download “

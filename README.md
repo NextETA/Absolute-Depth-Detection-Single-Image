@@ -8,4 +8,7 @@ Dependencies:
 
 2.  Tensorflow
 
-3.  P
+3.  Python 2.7
+
+
+Instructio

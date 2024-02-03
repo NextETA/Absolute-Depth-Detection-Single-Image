@@ -13,4 +13,4 @@ Dependencies:
 
 Instructions:
 
-1.  Download “
+1.  Download “images” and “depth

@@ -13,4 +13,4 @@ Dependencies:
 
 Instructions:
 
-1.  Download “images” and “depth” from the NYU Depth Dataset [V2](<https://
+1.  Download “images” and “depth” from the NYU Depth Dataset [V2](<https://cs.nyu.edu/~silbe

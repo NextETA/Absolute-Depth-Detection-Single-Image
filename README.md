@@ -18,4 +18,4 @@ Instructions:
 2.  Place both datasets in “data”
 
 
-- R
+- Run “python estimateSi

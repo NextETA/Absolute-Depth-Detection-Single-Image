@@ -18,4 +18,4 @@ Instructions:
 2.  Place both datasets in “data”
 
 
-- Run “python estimateSi
+- Run “python estimateSize.py” for si

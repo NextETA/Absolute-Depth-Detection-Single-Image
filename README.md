@@ -18,4 +18,6 @@ Instructions:
 2.  Place both datasets in “data”
 
 
-- Run “python estimateSize.py” for size estimatio
+- Run “python estimateSize.py” for size estimation
+
+- Run “python estima

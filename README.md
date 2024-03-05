@@ -20,4 +20,4 @@ Instructions:
 
 - Run “python estimateSize.py” for size estimation
 
-- Run “python estimateDepth.py” f
+- Run “python estimateDepth.py” for depth estimation

@@ -23,4 +23,6 @@ Instructions:
 - Run “python estimateDepth.py” for depth estimation
 
 
-Interested in contr
+Interested in contributing to labeling:
+
+1.

@@ -25,4 +25,6 @@ Instructions:
 
 Interested in contributing to labeling:
 
-1.
+1.  `cd labeling`
+
+2.  `py

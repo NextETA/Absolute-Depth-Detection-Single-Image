@@ -27,4 +27,5 @@ Interested in contributing to labeling:
 
 1.  `cd labeling`
 
-2.  `py
+2.  `python LabelingRig.py`
+
